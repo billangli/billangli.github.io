@@ -1,0 +1,430 @@
+/* Default fonts, shell: Tahoma, 
+system font(for System Properties, Device Manager, etc.) : MS Sans Serif */
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Tahoma, Geneva, Verdana, sans-serif;
+
+  --taskbar-blue: #235cdb;
+}
+
+ul {
+  list-style-type: none;
+}
+
+body {
+  /* background-image: url("images/wallpaper.jpg");
+  background-size: cover; */
+  background-image: url("images/bliss.bmp");
+  background-size: 100vw 100vh;
+  cursor: url("images/cursors/arrow.png"), auto;
+}
+
+h1 {
+  font-size: 20px;
+  color: white;
+}
+
+#desktop {
+  display: none;
+  /* desktop is full size so the cursor shows */
+  width: 100vw;
+  height: 100vh;
+}
+
+#desktop-bg {
+  width: 100vw;
+  /* height: 96.5vh; */
+  height: 97vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.app {
+  width: 72px;
+  height: 64px;
+  margin: 10px;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+.app img {
+  width: 36px;
+  height: 36px;
+}
+
+.app-name-container {
+  width: 72px;
+  height: 28px;
+}
+
+.app p {
+  display: inline-block;
+  color: white;
+  font-size: 12px;
+}
+
+.taskbar {
+  display: flex;
+  justify-content: space-evenly;
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
+  height: 3vh;
+  background-image: url("images/taskbar.png");
+  background-size: auto 100%;
+}
+
+#start {
+  width: 110px;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  background-image: url("images/start.png");
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+}
+
+#startmenu {
+  visibility: hidden;
+  height: 518px;
+  width: 380px;
+  position: absolute;
+  left: 0;
+  bottom: 30px;
+  background-image: url("images/startmenu.png");
+}
+
+#profile-pic {
+  position: absolute;
+  top: 9px;
+  left: 9px;
+  width: 48px;
+  height: 48px;
+}
+
+#username {
+  position: absolute;
+  top: 20px;
+  left: 68px;
+}
+
+#recent-apps,
+#my-apps {
+  font-size: 12px;
+  font-weight: bolder;
+}
+
+#saved-apps,
+#settings-apps,
+#other-apps,
+#power-buttons {
+  font-size: 12px;
+}
+
+/* Left side of the start menu */
+.left-apps ul li {
+  display: flex;
+  align-items: center;
+  width: 174px;
+  height: 36px;
+  margin: 2px;
+}
+
+.left-apps li:hover {
+  color: white;
+  background-color: #316ac5;
+}
+
+.left-apps ul li img {
+  width: 32px;
+  height: 32px;
+  padding: 2px;
+}
+
+#recent-apps {
+  position: absolute;
+  top: 72px;
+  left: 8px;
+}
+
+#saved-apps {
+  position: absolute;
+  top: 201px;
+  left: 8px;
+}
+
+#all-programs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 448px;
+  left: 8px;
+  width: 176px;
+  height: 24px;
+  text-align: center;
+}
+
+#all-programs:hover {
+  color: white;
+  background-color: #316ac5;
+}
+
+#all-programs p {
+  margin: 6px;
+  font-size: 12px;
+  font-weight: bolder;
+}
+
+#all-programs img {
+  width: 24px;
+  height: 24px;
+}
+
+/* Right side of the start menu */
+.right-apps ul li {
+  color: #0f121b;
+  display: flex;
+  align-items: center;
+  width: 176px;
+  height: 24px;
+  margin: 4px;
+}
+
+.right-apps ul li img {
+  width: 24px;
+  height: 24px;
+  margin-left: 2px;
+  margin-right: 4px;
+}
+
+.right-apps li:hover {
+  color: white;
+  background-color: #316ac5;
+}
+
+#my-apps {
+  position: absolute;
+  top: 70px;
+  left: 194px;
+}
+
+#settings-apps {
+  position: absolute;
+  top: 248px;
+  left: 194px;
+}
+
+#other-apps {
+  position: absolute;
+  top: 366px;
+  left: 194px;
+}
+
+/* Power Buttons */
+#power-buttons {
+  height: 30px;
+  position: absolute;
+  top: 482px;
+  right: 2px;
+  color: white;
+  /* border: 3px solid black; */
+}
+
+#power-buttons img {
+  width: 24px;
+  height: 24px;
+  margin: 3px;
+}
+
+#power-buttons ul li {
+  display: inline-flex;
+  align-items: center;
+  padding-right: 10px;
+}
+
+#power-buttons ul li:hover {
+  background-color: #316ac5;
+}
+
+.tasks {
+  flex-grow: 1;
+}
+
+/* Tray */
+/* .expand-tray {
+  height: 100%;
+  position: absolute;
+  right: 20vw;
+} */
+
+.tray {
+  height: 100%;
+  display: flex;
+  position: absolute;
+  right: 0;
+  background-image: url("images/tray.png");
+  background-size: auto 100%;
+}
+
+.tray img {
+  height: 60%;
+  margin-left: 5px;
+  align-self: center;
+}
+
+#time {
+  color: white;
+  font-size: 12px;
+  right: 0;
+  transform: translate(0, -10%);
+  padding: 10px;
+}
+
+/* Logon screen */
+#logon-top {
+  background-image: url("images/logon/newtop1.jpg");
+  background-size: 100vw 10vh;
+  width: 100vw;
+  height: 10vh;
+  position: fixed;
+}
+
+#logon-bg {
+  background-image: url("images/logon/newmark1.jpg");
+  background-size: 100vw 80vh;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 80vh;
+  position: fixed;
+  top: 10vh;
+}
+
+/* #logon-bg-left {
+  width: 49%;
+  height: 100%;
+  float: left;
+  text-align: right;
+}
+
+#logon-bg-right {
+  width: 49%;
+  height: 100%;
+  float: right;
+} */
+
+#logon-bg-left {
+  position: absolute;
+  top: 45%;
+  right: 53%;
+  margin: auto;
+  font-size: 14px;
+  color: white;
+  text-align: right;
+}
+
+#logon-bg-left p {
+  margin-top: 10px;
+}
+
+#logon-vert-line {
+  height: 90%;
+  position: absolute;
+  top: 5%;
+  right: 50%;
+}
+
+#logon-bg-right {
+  position: absolute;
+  top: 48%;
+  left: 53%;
+}
+
+#logon-pic-frame #logon-bg-right form {
+  float: left;
+}
+
+#logon-bar {
+  z-index: -1;
+  position: absolute;
+  top: -8px;
+  left: -4px;
+}
+
+#logon-pic-frame {
+  background-image: url("images/logon/outline.bmp");
+  background-size: 58px 58px;
+  width: 58px;
+  height: 58px;
+  float: left;
+}
+
+#logon-pic {
+  width: 48px;
+  height: 48px;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+}
+
+form {
+  float: left;
+  margin: 5px;
+  z-index: 1;
+}
+
+label {
+  color: white;
+  font-size: 11px;
+}
+
+label[for="pwd"] {
+  font-size: 20px;
+}
+
+#logon-pwd {
+  cursor: url("images/cursors/beam.png"), text;
+}
+
+#logon-btn {
+  margin-top: 58px;
+  margin-left: 6px;
+}
+
+#logon-btm {
+  background-image: url("images/logon/newbtm1.jpg");
+  background-size: 100vw 10vh;
+  width: 100vw;
+  height: 10vh;
+  position: fixed;
+  top: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logon-btm-content {
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+#logon-poweroff li {
+  color: white;
+  font-size: 16px;
+  font-weight: 900;
+  display: flex;
+  align-items: center;
+}
+
+#logon-poweroff img {
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+}
+
+#logon-note {
+  color: white;
+  font-size: 11px;
+}

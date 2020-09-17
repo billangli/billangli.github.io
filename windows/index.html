@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="main.css" />
+    <script src="main.js"></script>
+    <title>Windows XP</title>
+  </head>
+  <body>
+    <div id="desktop">
+      <div id="desktop-bg" onclick="toggleStartMenu(true); unselectApps();">
+        <div class="app" id="app-trash" onclick="selectApp(event, 'app-trash')">
+          <img src="images/app-icons/trash.ico" />
+          <div class="app-name-container">
+            <p>Recycle Bin</p>
+          </div>
+        </div>
+        <div class="app" id="app-msn" onclick="selectApp(event, 'app-msn')">
+          <img src="images/app-icons/msn.ico" />
+          <div class="app-name-container">
+            <p>MSN</p>
+          </div>
+        </div>
+        <div class="app" id="app-vlc" onclick="selectApp(event, 'app-vlc')">
+          <img src="images/app-icons/vlc.ico" />
+          <div class="app-name-container">
+            <p>VLC Media Player</p>
+          </div>
+        </div>
+      </div>
+      <div class="taskbar" onclick="unselectApps();">
+        <div id="start" onclick="toggleStartMenu();" onmouseover="startHover();" onmouseout="startUnhover();"></div>
+        <div id="startmenu">
+          <img src="images/menu-icons/profile-pic.png" alt="Bill" id="profile-pic" />
+          <h1 id="username">Bill</h1>
+          <div class="left-apps" id="recent-apps">
+            <ul>
+              <li><img src="images/menu-icons/paint.png" />Paint</li>
+              <li><img src="images/menu-icons/ie.ico" />Internet Explorer</li>
+              <li><img src="images/menu-icons/chrome.ico" />Chrome</li>
+            </ul>
+          </div>
+          <div class="left-apps" id="saved-apps">
+            <ul>
+              <li><img src="images/menu-icons/notepad.ico" />Notepad</li>
+              <li><img src="images/menu-icons/msn.ico" />MSN</li>
+              <li><img src="images/menu-icons/word.ico" />Microsoft Office Word 2003</li>
+              <li><img src="images/menu-icons/excel.ico" />Microsoft Office Excel 2003</li>
+              <li><img src="images/menu-icons/email.ico" />Microsoft Office Outlook 2003</li>
+            </ul>
+          </div>
+          <div id="all-programs">
+            <p>All Programs</p>
+            <img src="images/menu-icons/all-programs.ico" />
+          </div>
+          <div class="right-apps" id="my-apps">
+            <ul>
+              <li><img src="images/menu-icons/my-documents.ico" />My Documents</li>
+              <li><img src="images/menu-icons/my-recent-documents.ico" />My Recent Documents</li>
+              <li><img src="images/menu-icons/my-pictures.ico" />My Pictures</li>
+              <li><img src="images/menu-icons/my-music.ico" />My Music</li>
+              <li><img src="images/menu-icons/my-computer.ico" />My Computer</li>
+              <li><img src="images/menu-icons/my-network-places.ico" />My Network Places</li>
+            </ul>
+          </div>
+          <div class="right-apps" id="settings-apps">
+            <ul>
+              <li><img src="images/menu-icons/control-panel.ico" />Control Panel</li>
+              <li><img src="images/menu-icons/defaults.ico" />Set Program Access and Defaults</li>
+              <li><img src="images/menu-icons/connect.ico" />Connect To</li>
+              <li><img src="images/menu-icons/printers-and-faxes.ico" />Printers and Faxes</li>
+            </ul>
+          </div>
+          <div class="right-apps" id="other-apps">
+            <ul>
+              <li><img src="images/menu-icons/help-and-support.ico" />Help and Support</li>
+              <li><img src="images/menu-icons/search.ico" />Search</li>
+              <li><img src="images/menu-icons/run.ico" />Run..</li>
+            </ul>
+          </div>
+          <div id="power-buttons">
+            <ul>
+              <li><img src="images/menu-icons/log-off.ico" />Log Off</li>
+              <li><img src="images/menu-icons/power-off.ico" />Turn Off Computer</li>
+            </ul>
+          </div>
+        </div>
+        <!-- <image class="expand-tray" src="images/expand-tray.png"></img> -->
+        <div class="tasks" onclick="toggleStartMenu(true);"></div>
+        <div class="tray" onclick="toggleStartMenu(true);">
+          <img src="images/tray-icons/bluetooth.ico" alt="B" />
+          <img src="images/tray-icons/met.ico" alt="M" />
+          <img src="images/tray-icons/msn.ico" alt="M" />
+          <img src="images/tray-icons/print.ico" alt="P" />
+          <img src="images/tray-icons/vlc.ico" alt="V" />
+          <img src="images/tray-icons/warn.ico" alt="W" />
+          <div id="time"></div>
+        </div>
+      </div>
+      <script src="time.js"></script>
+    </div>
+    <div id="logon">
+      <div id="logon-top"></div>
+      <div id="logon-bg">
+        <div id="logon-bg-left">
+          <img id="logon-logo" src="images/logon/logo.bmp" />
+          <p id="logon-left-text">To begin, click your user name</p>
+        </div>
+        <img id="logon-vert-line" src="images/logon/vertical-line.bmp" style="height: 90%; align-self: center;" />
+        <div id="logon-bg-right">
+          <img id="logon-bar" src="images/logon/bar.png" />
+          <div id="logon-pic-frame">
+            <img id="logon-pic" src="images/menu-icons/profile-pic.png" />
+          </div>
+          <form id="logon-form" onsubmit="submitPassword();">
+            <label for="pwd">Bill Ang Li</label><br />
+            <label id="logon-prompt">Type in your password</label><br />
+            <input type="password" id="logon-pwd" name="pwd" />
+          </form>
+          <script>
+            document.getElementById("logon-form").addEventListener("submit", (event) => event.preventDefault());
+          </script>
+          <img
+            src="images/logon/btn.bmp"
+            id="logon-btn"
+            onclick="submitPassword();"
+            onmousedown="logonBtnDown();"
+            onmouseup="logonBtnUp();"
+          />
+        </div>
+      </div>
+      <div id="logon-btm">
+        <ul id="logon-poweroff" class="logon-btm-content">
+          <li><img src="images/menu-icons/power-off.ico" />Turn off computer</li>
+        </ul>
+        <span id="logon-note" class="logon-btm-content">
+          After you log on, you can add or change accounts. <br />
+          Just go to Control Panel and click User Accounts.
+        </span>
+      </div>
+    </div>
+  </body>
+</html>

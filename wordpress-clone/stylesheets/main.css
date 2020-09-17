@@ -1,0 +1,182 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  /* Color Palette */
+  --purple: #644efb;
+  --dark-purple: #492ff6;
+  --gold: #fed766;
+  --grey: rgb(70, 70, 64);
+  --grapefruit: #fe4a49;
+  --salmon: #ef7b45;
+  --cyan: #009fb7;
+
+  --color-1: rgb(25, 25, 25);
+  --color-1-alt: var(--grey);
+  --color-2: var(--gold);
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #fcfcfc;
+  color: black;
+}
+
+nav {
+  top: 0;
+  width: 100%;
+  background: var(--color-1);
+  text-align: center;
+  position: fixed;
+  z-index: 1;
+}
+
+h1 {
+  color: black;
+  font-size: 5vh;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  background: var(--cyan);
+  text-align: center;
+}
+
+h2 {
+  font-family: "Oswald", sans-serif;
+  font-size: 4vh;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+h3 {
+  font-family: "Oswald", sans-serif;
+  font-size: 3vh;
+}
+
+p {
+  font-family: "Lato", sans-serif;
+  font-size: 3vh;
+}
+
+footer {
+  color: white;
+  background-color: var(--grey);
+  text-align: center;
+  padding: 20px 0;
+}
+
+.main {
+  margin-top: 55px;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  padding: 10px 10px;
+  margin: 8px 0px;
+  display: inline-block;
+  transition: all 0.2s 0.1s;
+}
+
+.nav-link:hover {
+  background: var(--color-1-alt);
+  text-decoration: none;
+  padding: 10px 10px;
+  margin: 8px 0px;
+  display: inline-block;
+  transition: all 0.1s 0s;
+}
+
+.signature {
+  height: 8rem;
+  position: relative;
+  top: 10px;
+}
+
+.textblock {
+  padding: 10vw;
+}
+
+.content {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.flexbox-element {
+  flex: 50%;
+  padding: 30px;
+  overflow: hidden;
+  border: 10px black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.flexbox-element:hover {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.flexbox-element:hover .project-description {
+  display: block;
+}
+
+.flexbox-element:hover .project-image {
+  z-index: -1;
+}
+
+.project-description {
+  display: none;
+  color: white;
+  font-family: "Lato";
+  font-size: 1.5em;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  margin: 10%;
+}
+
+.mask {
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner {
+  color: var(--color-2);
+  font-family: "Roboto", sans-serif;
+  font-size: 4rem;
+  height: 50vw;
+  /* TODO: Make background-size maximize the image without duplicating */
+  background-size: auto 140vh;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.banner-one {
+  background-image: url("../images/IMG_5015.jpg");
+}
+
+.banner-two {
+  background-image: url("../images/uoft.jpg");
+}
+
+.banner-three {
+  background-image: url("../images/rock.jpg");
+}
+
+/* When the screen width is smaller than this change banners to static */
+@media screen and (max-width: 960px) {
+  .banner {
+    background-attachment: scroll;
+    background-size: 100vw auto;
+  }
+}

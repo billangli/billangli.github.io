@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="challenge.css" />
+    <title>Challenges</title>
+  </head>
+  <body>
+    <div class="container" id="challenge-1">
+      <div class="title-container">
+        <h1>Challenge 1: Your Age in Days</h1>
+      </div>
+      <div class="content horizontal-flex">
+        <button id="click-me" onclick="ageInDays()">Click me</button>
+        <button id="reset" onclick="resetAgeInDays()">Reset</button>
+      </div>
+      <div class="horizontal-flex" id="result-display-1"></div>
+    </div>
+    <div class="container" id="challenge-2">
+      <div class="title-container">
+        <h1>Challenge 2: Cookie Generator</h1>
+      </div>
+      <div class="content horizontal-flex">
+        <button id="generate-cookie" onclick="generateCookie()">
+          Generate Cookie
+        </button>
+      </div>
+      <div class="horizontal-flex" id="result-display-2"></div>
+    </div>
+    <div class="container" id="challenge-3">
+      <div class="title-container">
+        <h1>Challenge 3: Rock, Paper, Scissors</h1>
+      </div>
+      <div class="content horizontal-flex">
+        <div class="rps-display" id="rps-1">
+          <img
+            src="images/rock.png"
+            alt="Rock"
+            class="display"
+            onclick="rockPaperScissors(0)"
+          />
+        </div>
+        <div class="rps-display" id="rps-2">
+          <img
+            src="images/paper.png"
+            alt="Paper"
+            class="display"
+            onclick="rockPaperScissors(0)"
+          />
+        </div>
+        <div class="rps-display" id="rps-3">
+          <img
+            src="images/scissors.png"
+            alt="Scissors"
+            class="display"
+            onclick="rockPaperScissors(0)"
+          />
+        </div>
+      </div>
+    </div>
+    <!-- JavaScript -->
+    <script src="challenge.js"></script>
+  </body>
+</html>

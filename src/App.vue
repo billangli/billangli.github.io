@@ -54,7 +54,7 @@
     <div id="experience">
       <div class="container">
         <h1>Work Experience</h1>
-        <Job v-for="job in jobs" v-bind:position="job.position" />
+        <!-- <Job v-for="job in jobs" v-bind:position="job.position" /> -->
       </div>
     </div>
     <div id="projects">
@@ -77,9 +77,9 @@
         <h1>Contact Me</h1>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores sed quaerat id quo itaque ipsum blanditiis
-          commodi obcaecati molestias, modi consectetur cumque, quasi quia quae fuga fugit maxime. Corporis nihil
-          velit at delectus asperiores laboriosam illum doloremque sed ab veniam facilis laborum vero ipsum, incidunt
-          optio error suscipit deleniti. Numquam.
+          commodi obcaecati molestias, modi consectetur cumque, quasi quia quae fuga fugit maxime. Corporis nihil velit
+          at delectus asperiores laboriosam illum doloremque sed ab veniam facilis laborum vero ipsum, incidunt optio
+          error suscipit deleniti. Numquam.
         </p>
       </div>
     </div>
@@ -87,11 +87,11 @@
 </template>
 
 <script>
-import Job from "./components/Job";
+// import Job from "./components/Job";
 
 export default {
   name: "App",
-  components: { Job },
+  // components: { Job },
   // data() {
   //   return {
   //     jobs: [
@@ -104,16 +104,6 @@ export default {
   //     ],
   //   };
   // },
-  data: {
-    jobs: [
-      {
-        position: "soft",
-        company: "bmo",
-        date: "last year",
-        descriptions: ["y", "df"],
-      },
-    ],
-  },
 };
 </script>
 
