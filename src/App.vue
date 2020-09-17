@@ -54,7 +54,12 @@
     <div id="experience">
       <div class="container">
         <h1>Work Experience</h1>
-        <!-- <Job v-for="job in jobs" v-bind:position="job.position" /> -->
+        <div v-for="job in jobs" :key="job.position">
+          <h2>{{ job.position }} at {{ job.company }}</h2>
+          <h3>{{ job.date }}</h3>
+          <p v-for="line in job.descriptions" :key="line">{{ line }}</p>
+        </div>
+        <Job v-for="job in jobs" :key="job.position" :data="job" />
       </div>
     </div>
     <div id="projects">
@@ -87,27 +92,29 @@
 </template>
 
 <script>
-// import Job from "./components/Job";
+import Job from "./components/Job";
 
 export default {
   name: "App",
-  // components: { Job },
-  // data() {
-  //   return {
-  //     jobs: [
-  //       {
-  //         position: "soft",
-  //         company: "bmo",
-  //         date: "last year",
-  //         descriptions: ["y", "df"],
-  //       },
-  //     ],
-  //   };
-  // },
+  components: { Job },
+  data() {
+    return {
+      jobs: [
+        {
+          position: "soft",
+          company: "bmo",
+          date: "last year",
+          descriptions: ["y", "df"],
+        },
+      ],
+    };
+  },
 };
 </script>
 
 <style>
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif&family=Roboto:wght@700&display=swap");
+
 body {
   margin: 0;
   padding: 0;

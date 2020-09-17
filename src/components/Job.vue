@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h2>{{position}}</h2>
+    <h2>{{job.position}}</h2>
   </div>
 </template>
 
@@ -8,10 +8,12 @@
 export default {
   name: "Job",
   props: {
-    position: String,
-    company: String,
-    dates: String,
-    descriptions: Array,
+    data: {
+      position: String,
+      company: String,
+      dates: String,
+      descriptions: Array,
+    },
   },
 };
 </script>
