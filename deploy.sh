@@ -10,14 +10,16 @@ npm run build
 cd dist
 
 # if you are deploying to a custom domain
-# echo 'www.billangli.com' > CNAME
+echo 'www.billangli.com' > CNAME
+# echo 'billangli.github.io' > CNAME
 
 git init
+git checkout -b gh-pages
 git add -A
 git commit -m 'deploy'
 
 # if you are deploying to https://<USERNAME>.github.io
-git push -f git@github.com:billangli/billangli.github.io.git master
+git push -f git@github.com:billangli/billangli.github.io.git gh-pages
 
 # if you are deploying to https://<USERNAME>.github.io/<REPO>
 # git push -f git@github.com:<USERNAME>/<REPO>.git master:gh-pages
