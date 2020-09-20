@@ -55,11 +55,16 @@
       <div class="container">
         <h1>Work Experience</h1>
         <div v-for="job in jobs" :key="job.position">
-          <h2>{{ job.position }} at {{ job.company }}</h2>
-          <h3>{{ job.date }}</h3>
-          <p v-for="line in job.descriptions" :key="line">{{ line }}</p>
+          <h2>{{ job.position }}</h2>
+          <div style="clear: both;">
+            <h3 class="alignLeft">{{ job.company }}</h3>
+            <h3 class="alignRight">{{ job.date }}</h3>
+          </div>
+          <br />
+          <ul id="job-description">
+            <li v-for="line in job.descriptions" :key="line">{{ line }}</li>
+          </ul>
         </div>
-        <Job v-for="job in jobs" :key="job.position" :data="job" />
       </div>
     </div>
     <div id="projects">
@@ -92,19 +97,33 @@
 </template>
 
 <script>
-import Job from "./components/Job";
-
 export default {
   name: "App",
-  components: { Job },
+  components: {},
   data() {
     return {
       jobs: [
         {
-          position: "soft",
-          company: "bmo",
-          date: "last year",
-          descriptions: ["y", "df"],
+          position: "Data Engineer Work Study Student",
+          company: "Toronto General Hospital",
+          date: "2018-05 - 2020-04",
+          descriptions: [
+            "Automated web traffic metric reporting using Python, including data collection, processing and analysis",
+            "Led team in the design and development of a provincial clinical tool that recruits potential organ donors",
+            "Managed over 20 Python scripts to ensure daily data delivery to the research team",
+            "Improved data scraping and processing by creating diagnostic tests",
+            "Automated the process for storing backups of WebEx meeting recordings on Vimeo using Python",
+          ],
+        },
+        {
+          position: "Software Developer Intern",
+          company: "Bank of Montreal",
+          date: "2019-05 - 2019-08",
+          descriptions: [
+            "Created a C# application for comparing GemFire clusters to ensure that all data was uploaded to the cloud",
+            "Laid groundwork for migration from Netezza to Greenplum databases to improve performance for the production support team",
+            "Debugged and expanded an F# build tool for packaging and deploying code used by the Middleware team",
+          ],
         },
       ],
     };
@@ -119,29 +138,26 @@ body {
 }
 
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  /* text-align: center; */
-  /* color: #2c3e50; */
-  margin: 0;
-  padding: 0;
+  font-family: Helvetica, Arial, sans-serif;
 }
 
 h1 {
   font-family: "Roboto", sans-serif;
-  font-size: 48px;
+  font-size: 2.5em;
   padding: 0;
 }
 
 h2 {
   font-family: "Roboto", sans-serif;
-  font-size: 28px;
+  font-size: 1.5em;
+  line-height: 0;
+  margin: 30px 0 10px 0;
 }
 
 h3 {
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 24px;
+  font-size: 1em;
+  line-height: 0;
   font-style: italic;
 }
 
@@ -161,8 +177,20 @@ h6 {
 
 p {
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 20px;
+  font-size: 1em;
   line-height: 30px;
+}
+
+.alignLeft {
+  float: left;
+}
+
+.alignRight {
+  float: right;
+}
+
+#job-description li {
+  line-height: 25px;
 }
 
 #navbar ul {
