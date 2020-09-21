@@ -47,7 +47,7 @@
         <h1>About Me</h1>
         <p>
           I love programming, playing basketball, learning guitar melodies and reading books. I am finishing up my
-          degree of a Specialist in Computer Science and a Minor in Economics. I
+          degree of a Specialist in Computer Science and a Minor in Economics.
         </p>
       </div>
     </div>
@@ -70,28 +70,22 @@
     <div id="projects">
       <div class="container">
         <h1>Select Projects</h1>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus qui accusantium dicta cum pariatur sint
-          esse, cupiditate alias minus fugit obcaecati dolores doloremque rerum dolorem inventore corporis aperiam
-          placeat neque et mollitia adipisci repellendus. Explicabo, mollitia expedita ad accusamus non illum totam
-          consequuntur suscipit, a autem ut atque sapiente, minima cum architecto blanditiis enim aliquid corporis
-          exercitationem iste? Est repellendus voluptatibus ratione quisquam ullam possimus voluptate doloribus iste
-          exercitationem, libero sunt facere laboriosam labore at. Excepturi cupiditate, libero aperiam sunt similique
-          unde porro pariatur laboriosam autem magni, minus fugiat incidunt enim. Obcaecati eaque totam facere, sequi
-          qui vero molestiae. Sed.
-        </p>
+        <p>Coming soon.</p>
       </div>
     </div>
-    <div id="contact">
+    <div id="contact" style="padding: 20px 0 30px 0;">
       <div class="container">
         <h1>Contact Me</h1>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores sed quaerat id quo itaque ipsum blanditiis
-          commodi obcaecati molestias, modi consectetur cumque, quasi quia quae fuga fugit maxime. Corporis nihil velit
-          at delectus asperiores laboriosam illum doloremque sed ab veniam facilis laborum vero ipsum, incidunt optio
-          error suscipit deleniti. Numquam.
-        </p>
+        <h2>Email</h2>
+        <a href="mailto:bill.ang.li@hotmail.com">bill.ang.li@hotmail.com</a>
+        <h2>GitHub</h2>
+        <a href="github.com/billangli">@billangli</a>
+        <h2>LinkedIn</h2>
+        <a href="linkedin.com/in/billangli">Bill Ang Li</a>
       </div>
+    </div>
+    <div id="footer">
+      <p style="text-align: center;">Created by Bill Ang Li, 2020</p>
     </div>
   </div>
 </template>
