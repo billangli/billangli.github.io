@@ -2,7 +2,7 @@
   <div id="app">
     <div id="navbar">
       <ul>
-        <li style="float:left">
+        <li style="float: left">
           <a href="#banner">
             <h5>Bill Ang Li</h5>
           </a>
@@ -27,18 +27,17 @@
             <h5>Contact</h5>
           </a>
         </li>
-        <li>
+        <!-- <li>
           <a href="#resume">
             <h5>Resume</h5>
           </a>
-          <!-- todo: resume link -->
-        </li>
+        </li> -->
       </ul>
     </div>
     <div id="banner">
       <img src="../public/cropped-headshot-small.png" alt="Bill's headshot" class="clip-circle" />
       <br />
-      <img src="../public/signature.png" alt="Bill Ang Li" style="padding-top:20px;" />
+      <img src="../public/signature.png" alt="Bill Ang Li" style="padding-top: 20px" />
       <h6>Computer Science student at the University of Toronto</h6>
       <h6>Looking for 2021 New Grad jobs</h6>
     </div>
@@ -70,10 +69,18 @@
     <div id="projects">
       <div class="container">
         <h1>Select Projects</h1>
-        <p>Coming soon.</p>
+        <div v-for="project in projects" :key="project" style="display: flex; margin-bottom: 20px;">
+          <a :href="project.url" target="_blank"
+            ><img :src="project.image" :alt="project.alt" style="height: 100px; width: 100px;"
+          /></a>
+          <div style="margin: 20px;">
+            <h2>{{ project.title }}</h2>
+            <h3 style="padding-top: 10px;">{{ project.description }}</h3>
+          </div>
+        </div>
       </div>
     </div>
-    <div id="contact" style="padding: 20px 0 30px 0;">
+    <div id="contact" style="padding: 20px 0 30px 0">
       <div class="container">
         <h1>Contact Me</h1>
         <h2>Email</h2>
@@ -85,7 +92,7 @@
       </div>
     </div>
     <div id="footer">
-      <p style="text-align: center;">Created by Bill Ang Li, 2020</p>
+      <p style="text-align: center">Created by Bill Ang Li, 2020</p>
     </div>
   </div>
 </template>
@@ -118,6 +125,29 @@ export default {
             "Laid groundwork for migration from Netezza to Greenplum databases to improve performance for the production support team",
             "Debugged and expanded an F# build tool for packaging and deploying code used by the Middleware team",
           ],
+        },
+      ],
+      projects: [
+        {
+          title: "ActivityWatch",
+          description: "Contributor to Open-Source Project",
+          image: "activitywatch.png",
+          alt: "ActivityWatch Logo",
+          url: "https://activitywatch.net/",
+        },
+        {
+          title: "Restaurant Inventory and Staff Manager",
+          description: "Class Project",
+          image: "restaurant-system.png",
+          alt: "Inventory App",
+          url: "https://github.com/billangli/RestaurantSystem",
+        },
+        {
+          title: "Gesture-based Musical Instrument",
+          description: "1st Place Facebook Demo at Hack the North 2018",
+          image: "synthly.png",
+          alt: "Synthly App",
+          url: "https://devpost.com/software/synthly",
         },
       ],
     };
