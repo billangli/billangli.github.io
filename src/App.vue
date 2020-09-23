@@ -3,7 +3,7 @@
     <div id="navbar">
       <ul>
         <li style="float: left">
-          <a href="#banner">
+          <a href="#">
             <h5>Bill Ang Li</h5>
           </a>
         </li>
@@ -27,17 +27,25 @@
             <h5>Contact</h5>
           </a>
         </li>
-        <!-- <li>
-          <a href="#resume">
+        <li>
+          <a href="resume.pdf" download="Bill Ang Li Resume">
             <h5>Resume</h5>
           </a>
-        </li> -->
+        </li>
       </ul>
     </div>
     <div id="banner">
-      <img src="../public/cropped-headshot-small.png" alt="Bill's headshot" class="clip-circle" />
+      <img
+        src="../public/cropped-headshot-small.png"
+        alt="Bill's headshot"
+        class="clip-circle"
+      />
       <br />
-      <img src="../public/signature.png" alt="Bill Ang Li" style="padding-top: 20px" />
+      <img
+        src="../public/signature.png"
+        alt="Bill Ang Li"
+        style="padding-top: 20px"
+      />
       <h6>Computer Science student at the University of Toronto</h6>
       <h6>Looking for 2021 New Grad jobs</h6>
     </div>
@@ -45,8 +53,9 @@
       <div class="container">
         <h1>About Me</h1>
         <p>
-          I love programming, playing basketball, learning guitar melodies and reading books. I am finishing up my
-          degree of a Specialist in Computer Science and a Minor in Economics.
+          I love programming, playing basketball, learning guitar melodies and
+          reading books. I am finishing up my degree of a Specialist in Computer
+          Science and a Minor in Economics.
         </p>
       </div>
     </div>
@@ -55,7 +64,7 @@
         <h1>Work Experience</h1>
         <div v-for="job in jobs" :key="job.position">
           <h2>{{ job.position }}</h2>
-          <div style="clear: both;">
+          <div style="clear: both">
             <h3 class="alignLeft">{{ job.company }}</h3>
             <h3 class="alignRight">{{ job.date }}</h3>
           </div>
@@ -69,13 +78,24 @@
     <div id="projects">
       <div class="container">
         <h1>Select Projects</h1>
-        <div v-for="project in projects" :key="project" style="display: flex; margin-bottom: 20px;">
-          <a :href="project.url" target="_blank"
-            ><img :src="project.image" :alt="project.alt" style="height: 100px; width: 100px;"
-          /></a>
-          <div style="margin: 20px;">
+        <div
+          v-for="project in projects"
+          :key="project"
+          style="display: flex; margin-bottom: 20px"
+        >
+          <div class="project-img-container">
+            <div class="img-overlay">
+              <a :href="project.url" target="_blank">
+                <img
+                  :src="project.image"
+                  :alt="project.alt"
+                  class="project-img"
+              /></a>
+            </div>
+          </div>
+          <div style="margin: 20px">
             <h2>{{ project.title }}</h2>
-            <h3 style="padding-top: 10px;">{{ project.description }}</h3>
+            <h3 style="padding-top: 10px">{{ project.description }}</h3>
           </div>
         </div>
       </div>
@@ -138,7 +158,7 @@ export default {
         {
           title: "Restaurant Inventory and Staff Manager",
           description: "Class Project",
-          image: "restaurant-system.png",
+          image: "cropped-restaurant-system.png",
           alt: "Inventory App",
           url: "https://github.com/billangli/RestaurantSystem",
         },
@@ -223,7 +243,7 @@ p {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  position: fixed;
+  /* position: fixed; */
   top: 0;
   width: 100%;
   background-color: white;
@@ -232,6 +252,10 @@ p {
 
 #navbar li {
   display: inline-block;
+}
+
+#navbar li:hover {
+  background-color: #c0f5fa;
 }
 
 #navbar li a {
@@ -253,6 +277,22 @@ p {
 .container {
   max-width: 800px;
   margin: auto;
+}
+
+.project-img {
+  max-height: 100px;
+  max-width: 100px;
+}
+
+.img-overlay {
+  background: rgba(0, 0, 0, 0);
+  transition: 0.5s ease;
+  padding: 10px;
+  text-align: center;
+}
+
+.project-img-container:hover .img-overlay {
+  background-color: #c0f5fa;
 }
 
 #contact {
