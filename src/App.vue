@@ -83,17 +83,17 @@
           :key="project"
           style="display: flex; margin-bottom: 20px"
         >
-          <div class="project-img-container">
+          <div class="project-img-container"  :href="project.url" target="_blank">
             <div class="img-overlay">
-              <a :href="project.url" target="_blank">
                 <img
                   :src="project.image"
                   :alt="project.alt"
                   class="project-img"
-              /></a>
+                  style="display: block;"
+              />
             </div>
           </div>
-          <div style="margin: 20px">
+          <div style="margin: 15px">
             <h2>{{ project.title }}</h2>
             <h3 style="padding-top: 10px">{{ project.description }}</h3>
           </div>
@@ -158,7 +158,7 @@ export default {
         {
           title: "Restaurant Inventory and Staff Manager",
           description: "Class Project",
-          image: "cropped-restaurant-system.png",
+          image: "restaurant-system-square.png",
           alt: "Inventory App",
           url: "https://github.com/billangli/RestaurantSystem",
         },
@@ -169,6 +169,20 @@ export default {
           alt: "Synthly App",
           url: "https://devpost.com/software/synthly",
         },
+        {
+          title: "Spotify Song Recommender Based on User Mood",
+          description: "Best Use of Innovative AI at Hack Western 4",
+          image: "bella.png",
+          alt: "Bella App",
+          url: "https://devpost.com/software/freeplay",
+        },        
+        {
+          title: "Vacant Library Seat Detector",
+          description: "1st Place at Hack the 6ix 2017",
+          image: "seat-me-square.png",
+          alt: "Seat Me App",
+          url: "https://github.com/kx1235/WeCamSee",
+        },        
       ],
     };
   },
@@ -195,7 +209,7 @@ h1 {
 
 h2 {
   font-family: "Roboto", sans-serif;
-  font-size: 1.5em;
+  font-size: 1em;
   line-height: 0;
   margin: 30px 0 10px 0;
 }
