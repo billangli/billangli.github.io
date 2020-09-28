@@ -28,7 +28,7 @@
           </a>
         </li>
         <li>
-          <a href="resume.pdf" download="Bill Ang Li Resume">
+          <a href="resume.pdf" target="_blank">
             <h5>Resume</h5>
           </a>
         </li>
