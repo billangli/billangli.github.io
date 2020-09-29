@@ -83,14 +83,16 @@
           :key="project"
           style="display: flex; margin-bottom: 20px"
         >
-          <div class="project-img-container"  :href="project.url" target="_blank">
+          <div class="project-img-container">
             <div class="img-overlay">
+              <a :href="project.url" target="_blank">
                 <img
                   :src="project.image"
                   :alt="project.alt"
                   class="project-img"
-                  style="display: block;"
-              />
+                  style="display: block"
+                />
+              </a>
             </div>
           </div>
           <div style="margin: 15px">
@@ -112,7 +114,7 @@
       </div>
     </div>
     <div id="footer">
-      <p style="text-align: center">Created by Bill Ang Li, 2020</p>
+      <p style="text-align: center"><strong>Bill Ang Li</strong> - 2020</p>
     </div>
   </div>
 </template>
@@ -175,14 +177,14 @@ export default {
           image: "bella.png",
           alt: "Bella App",
           url: "https://devpost.com/software/freeplay",
-        },        
+        },
         {
           title: "Vacant Library Seat Detector",
           description: "1st Place at Hack the 6ix 2017",
           image: "seat-me-square.png",
           alt: "Seat Me App",
           url: "https://github.com/kx1235/WeCamSee",
-        },        
+        },
       ],
     };
   },
@@ -209,7 +211,7 @@ h1 {
 
 h2 {
   font-family: "Roboto", sans-serif;
-  font-size: 1em;
+  font-size: 1.5em;
   line-height: 0;
   margin: 30px 0 10px 0;
 }
