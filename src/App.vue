@@ -108,9 +108,13 @@
         <h2>Email</h2>
         <a href="mailto:bill.ang.li@hotmail.com">bill.ang.li@hotmail.com</a>
         <h2>GitHub</h2>
-        <a href="github.com/billangli">@billangli</a>
+        <a href="https://www.github.com/billangli" target="_blank"
+          >@billangli</a
+        >
         <h2>LinkedIn</h2>
-        <a href="linkedin.com/in/billangli">Bill Ang Li</a>
+        <a href="https://www.linkedin.com/in/billangli" target="_blank"
+          >Bill Ang Li</a
+        >
       </div>
     </div>
     <div id="footer">
