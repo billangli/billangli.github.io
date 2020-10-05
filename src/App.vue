@@ -5,38 +5,38 @@
         <li style="float: left">
           <a href="#">
             <h5>Bill Ang Li</h5>
-            <div id="underline"></div>
+            <div class="underline"></div>
           </a>
         </li>
         <li>
           <a href="#about">
             <h5>About</h5>
-            <div id="underline"></div>
+            <div class="underline"></div>
           </a>
         </li>
         <li>
           <a href="#experience">
             <h5>Experience</h5>
-            <div id="underline"></div>
+            <div class="underline"></div>
           </a>
         </li>
         <li>
           <a href="#projects">
             <h5>Projects</h5>
-            <div id="underline"></div>
+            <div class="underline"></div>
           </a>
         </li>
         <li>
           <a href="#contact">
             <h5>Contact</h5>
-            <div id="underline"></div>
+            <div class="underline"></div>
           </a>
         </li>
         <li>
           <a href="resume.pdf" target="_blank">
             <h5>Resume</h5>
             <div style="background-color: var(--red)">
-              <div id="underline"></div>
+              <div class="underline"></div>
             </div>
           </a>
         </li>
@@ -59,21 +59,22 @@
     </div>
     <div id="about" class="container">
       <h1>About Me</h1>
-      <p>
+      <p style="line-height: 30px">
         I love programming, playing basketball, learning guitar melodies and
-        reading books. I am finishing up my degree of a Specialist in Computer
-        Science and a Minor in Economics.
+        reading books. I worked on some back-end tasks at my time at the Bank of
+        Montreal, I worked part-time as a data engineer at the Toronto General
+        Hospital and now I am learning front-end development by contributing to
+        an open-source project.
       </p>
     </div>
     <div id="experience" class="container">
       <h1>Work Experience</h1>
       <div v-for="job in jobs" :key="job.position">
         <h2>{{ job.position }}</h2>
-        <div style="clear: both">
+        <div style="clear: both; height: 1.5em; width: 100%">
           <h3 class="alignLeft">{{ job.company }}</h3>
           <h3 class="alignRight">{{ job.date }}</h3>
         </div>
-        <br />
         <ul id="job-description">
           <li v-for="line in job.descriptions" :key="line">{{ line }}</li>
         </ul>
@@ -98,25 +99,48 @@
             </a>
           </div>
         </div>
-        <div style="margin: 15px">
-          <h2>{{ project.title }}</h2>
-          <h3 style="padding-top: 10px">{{ project.description }}</h3>
+        <div style="display: table; margin: 15px; height: 75px">
+          <div style="display: table-cell; vertical-align: middle">
+            <h2 style="margin: 0">{{ project.title }}</h2>
+            <h3>{{ project.description }}</h3>
+          </div>
         </div>
       </div>
     </div>
     <div id="contact" style="padding: 20px 0 30px 0">
       <div class="container">
         <h1>Contact Me</h1>
-        <h2>Email</h2>
-        <a href="mailto:bill.ang.li@hotmail.com">bill.ang.li@hotmail.com</a>
-        <h2>GitHub</h2>
-        <a href="https://www.github.com/billangli" target="_blank"
-          >@billangli</a
-        >
-        <h2>LinkedIn</h2>
-        <a href="https://www.linkedin.com/in/billangli" target="_blank"
-          >Bill Ang Li</a
-        >
+        <div style="display: flex; justify-content: space-between">
+          <a class="contact-entry" href="mailto:bill.ang.li@hotmail.com">
+            <img src="email.png" alt="GitHub Icon" class="icon" />
+            <div>
+              <h2>Email</h2>
+              <p>bill.ang.li@hotmail.com</p>
+            </div>
+          </a>
+          <a
+            class="contact-entry"
+            href="https://www.github.com/billangli"
+            target="_blank"
+          >
+            <img src="github.png" alt="GitHub Icon" class="icon" />
+            <div>
+              <h2>GitHub</h2>
+              <p>@billangli</p>
+            </div>
+          </a>
+          <a
+            class="contact-entry"
+            href="https://www.linkedin.com/in/billangli"
+            target="_blank"
+          >
+            <img src="linkedin.png" alt="GitHub Icon" class="icon" />
+            <div>
+              <h2>LinkedIn</h2>
+              <p>Bill Ang Li</p>
+            </div>
+          </a>
+        </div>
       </div>
     </div>
     <div id="footer">
@@ -124,6 +148,181 @@
     </div>
   </div>
 </template>
+
+<style>
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif&family=Roboto:wght@700&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+  --blue: #c0f5fa;
+  --red: #fc5f39;
+  --green: #a8de00;
+  --light-gray: #e7ebee;
+}
+
+#app {
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+h1 {
+  font-family: "Roboto", sans-serif;
+  font-size: 2.5em;
+  margin-bottom: 0.5em;
+}
+
+h2 {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.5em;
+  margin: 0;
+}
+
+h3 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1em;
+  font-style: italic;
+  margin-top: 0.5em;
+  margin-bottom: 0;
+}
+
+h4 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1em;
+  margin: 0;
+  padding: 1em;
+}
+
+h5 {
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  text-transform: uppercase;
+  margin-top: 1em;
+  margin-bottom: 0;
+}
+
+h6 {
+  font-family: "Noto Serif", serif;
+  font-size: 24px;
+  line-height: 0;
+  margin: 40px;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+  padding: 0;
+}
+
+p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1em;
+  margin: 0;
+}
+
+.alignLeft {
+  float: left;
+}
+
+.alignRight {
+  float: right;
+}
+
+#job-description li {
+  line-height: 25px;
+}
+
+#navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: var(--light-gray);
+  text-align: right;
+}
+
+#navbar li {
+  display: inline-block;
+}
+
+#navbar li a {
+  display: block;
+  text-align: center;
+  padding: 0 15px;
+  color: black;
+  text-decoration: none;
+}
+
+.underline {
+  width: 100%;
+  height: 0.4em;
+  margin-bottom: 0.8em;
+  transition: 0.5s ease;
+}
+
+#navbar a:hover .underline {
+  background-color: var(--green);
+}
+
+#banner {
+  padding-top: 8em;
+  padding-bottom: 2em;
+  margin: 0;
+  text-align: center;
+  background-color: var(--blue);
+}
+
+.container {
+  max-width: 800px;
+  margin: auto;
+  padding-top: 50px;
+}
+
+#job-description li {
+  line-height: 30px;
+}
+
+.project-img {
+  max-height: 100px;
+  max-width: 100px;
+}
+
+.img-overlay {
+  background: rgba(0, 0, 0, 0);
+  transition: 0.5s ease;
+  padding: 10px;
+  text-align: center;
+}
+
+.project-img-container:hover .img-overlay {
+  background-color: var(--green);
+}
+
+.contact-entry {
+  display: flex;
+  padding: 10px;
+  transition: 0.5s ease;
+}
+
+.contact-entry:hover {
+  background-color: var(--red);
+}
+
+.icon {
+  width: 48px;
+  height: 48px;
+  margin-right: 10px;
+}
+
+/* #contact {
+  background-color: var(--blue);
+} */
+
+#footer {
+  background: var(--light-gray);
+}
+</style>
 
 <script>
 export default {
@@ -196,151 +395,3 @@ export default {
   },
 };
 </script>
-
-<style>
-@import url("https://fonts.googleapis.com/css2?family=Noto+Serif&family=Roboto:wght@700&display=swap");
-
-body {
-  margin: 0;
-  padding: 0;
-  --blue: #c0f5fa;
-  --red: #fc5f39;
-  --green: #a8de00;
-  --light-gray: #e7ebee;
-}
-
-#app {
-  font-family: Helvetica, Arial, sans-serif;
-}
-
-h1 {
-  font-family: "Roboto", sans-serif;
-  font-size: 2.5em;
-}
-
-h2 {
-  font-family: "Roboto", sans-serif;
-  font-size: 1.5em;
-  line-height: 0;
-  /* margin: 30px 0 10px 0; */
-}
-
-h3 {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 1em;
-  line-height: 0;
-  font-style: italic;
-}
-
-h4 {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 1em;
-  margin: 0;
-  padding: 1em;
-}
-
-h5 {
-  font-family: "Roboto", sans-serif;
-  font-size: 20px;
-  text-transform: uppercase;
-  margin-top: 1em;
-  margin-bottom: 0;
-}
-
-h6 {
-  font-family: "Noto Serif", serif;
-  font-size: 24px;
-  line-height: 0;
-  margin: 40px;
-}
-
-p {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 1em;
-  line-height: 30px;
-}
-
-.alignLeft {
-  float: left;
-}
-
-.alignRight {
-  float: right;
-}
-
-#job-description li {
-  line-height: 25px;
-}
-
-#navbar ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background-color: var(--light-gray);
-  text-align: right;
-}
-
-#navbar li {
-  display: inline-block;
-}
-
-#navbar li a {
-  display: block;
-  text-align: center;
-  padding: 0 15px;
-  color: black;
-  text-decoration: none;
-}
-
-#underline {
-  width: 100%;
-  height: 0.4em;
-  margin-bottom: 0.8em;
-  transition: 0.5s ease;
-}
-
-#navbar a:hover #underline {
-  background-color: var(--green);
-}
-
-#banner {
-  padding-top: 8em;
-  padding-bottom: 2em;
-  margin: 0;
-  text-align: center;
-  background-color: var(--blue);
-}
-
-.container {
-  max-width: 800px;
-  margin: auto;
-  padding-top: 50px;
-}
-
-.project-img {
-  max-height: 100px;
-  max-width: 100px;
-}
-
-.img-overlay {
-  background: rgba(0, 0, 0, 0);
-  transition: 0.5s ease;
-  padding: 10px;
-  text-align: center;
-}
-
-.project-img-container:hover .img-overlay {
-  background-color: var(--green);
-}
-
-#contact {
-  background-color: var(--blue);
-}
-
-#footer {
-  background: var(--light-gray);
-}
-</style>
