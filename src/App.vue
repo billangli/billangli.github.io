@@ -388,7 +388,7 @@ export default {
           description: "1st Place at Hack the 6ix 2017",
           image: "seat-me-square.png",
           alt: "Seat Me App",
-          url: "https://github.com/kx1235/WeCamSee",
+          url: "https://devpost.com/software/wecamsee",
         },
       ],
     };
