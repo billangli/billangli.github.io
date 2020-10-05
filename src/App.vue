@@ -107,40 +107,38 @@
         </div>
       </div>
     </div>
-    <div id="contact" style="padding: 20px 0 30px 0">
-      <div class="container">
-        <h1>Contact Me</h1>
-        <div style="display: flex; justify-content: space-between">
-          <a class="contact-entry" href="mailto:bill.ang.li@hotmail.com">
-            <img src="email.png" alt="GitHub Icon" class="icon" />
-            <div>
-              <h2>Email</h2>
-              <p>bill.ang.li@hotmail.com</p>
-            </div>
-          </a>
-          <a
-            class="contact-entry"
-            href="https://www.github.com/billangli"
-            target="_blank"
-          >
-            <img src="github.png" alt="GitHub Icon" class="icon" />
-            <div>
-              <h2>GitHub</h2>
-              <p>@billangli</p>
-            </div>
-          </a>
-          <a
-            class="contact-entry"
-            href="https://www.linkedin.com/in/billangli"
-            target="_blank"
-          >
-            <img src="linkedin.png" alt="GitHub Icon" class="icon" />
-            <div>
-              <h2>LinkedIn</h2>
-              <p>Bill Ang Li</p>
-            </div>
-          </a>
-        </div>
+    <div id="contact" class="container">
+      <h1>Contact Me</h1>
+      <div style="display: flex; justify-content: space-between">
+        <a class="contact-entry" href="mailto:bill.ang.li@hotmail.com">
+          <img src="email.png" alt="GitHub Icon" class="icon" />
+          <div>
+            <h2>Email</h2>
+            <p>bill.ang.li@hotmail.com</p>
+          </div>
+        </a>
+        <a
+          class="contact-entry"
+          href="https://www.github.com/billangli"
+          target="_blank"
+        >
+          <img src="github.png" alt="GitHub Icon" class="icon" />
+          <div>
+            <h2>GitHub</h2>
+            <p>@billangli</p>
+          </div>
+        </a>
+        <a
+          class="contact-entry"
+          href="https://www.linkedin.com/in/billangli"
+          target="_blank"
+        >
+          <img src="linkedin.png" alt="GitHub Icon" class="icon" />
+          <div>
+            <h2>LinkedIn</h2>
+            <p>Bill Ang Li</p>
+          </div>
+        </a>
       </div>
     </div>
     <div id="footer">
@@ -187,9 +185,10 @@ h3 {
 
 h4 {
   font-family: Arial, Helvetica, sans-serif;
+  font-weight: 400;
   font-size: 1em;
   margin: 0;
-  padding: 1em;
+  padding: 1.5em;
 }
 
 h5 {
@@ -320,6 +319,7 @@ p {
 } */
 
 #footer {
+  margin-top: 50px;
   background: var(--light-gray);
 }
 </style>
